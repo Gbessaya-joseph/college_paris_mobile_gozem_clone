@@ -112,79 +112,39 @@ class HomeBodyScreen extends StatelessWidget {
                   child: Center(
                     child: Row(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                decoration: BoxDecoration(
-                                    color: Color.fromARGB(3, 247, 245, 245),
-                                    borderRadius: BorderRadius.circular(5),
-                                    image: const DecorationImage(
-                                        image: AssetImage('assets/zem.png'),
-                                        fit: BoxFit.cover)),
-                              ),
-                              Text("Zem")
-                            ],
-                          ),
+                        Content(imageUrl: "assets/zem.png", title: 'Zem'),
+                        Content(
+                            imageUrl: "assets/voiture.png", title: 'Voiture'),
+                        Content(
+                            imageUrl: "assets/tricycle.png", title: 'Tricycle'),
+                        Content(imageUrl: "assets/course.png", title: 'Course'),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Center(
+                    child: Row(
+                      children: [
+                        Content(
+                            imageUrl: "assets/rechargecred.png",
+                            title: 'Recharger'),
+                        Content(
+                          imageUrl: 'assets/coursier.png',
+                          title: 'Coursier',
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                decoration: BoxDecoration(
-                                    color: Color.fromARGB(3, 247, 245, 245),
-                                    borderRadius: BorderRadius.circular(5),
-                                    image: const DecorationImage(
-                                        image: AssetImage('assets/voiture.png'),
-                                        fit: BoxFit.cover)),
-                              ),
-                              Text("Voiture")
-                            ],
-                          ),
+                        Content(
+                          imageUrl: 'assets/billeterie.png',
+                          title: 'Billeterie',
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                decoration: BoxDecoration(
-                                    color: Color.fromARGB(3, 247, 245, 245),
-                                    borderRadius: BorderRadius.circular(5),
-                                    image: const DecorationImage(
-                                        image:
-                                            AssetImage('assets/tricycle.png'),
-                                        fit: BoxFit.cover)),
-                              ),
-                              Text("Tricycle")
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                decoration: BoxDecoration(
-                                    color: Color.fromARGB(3, 247, 245, 245),
-                                    borderRadius: BorderRadius.circular(5),
-                                    image: const DecorationImage(
-                                        image: AssetImage('assets/course.png'),
-                                        fit: BoxFit.cover)),
-                              ),
-                              Text("Course à"),
-                              Text("l'heure")
-                            ],
-                          ),
+                        Content(
+                          imageUrl: 'assets/food.png',
+                          title: 'Food',
                         ),
                       ],
                     ),
@@ -199,81 +159,15 @@ class HomeBodyScreen extends StatelessWidget {
                   child: Center(
                     child: Row(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                decoration: BoxDecoration(
-                                    color: Color.fromARGB(3, 247, 245, 245),
-                                    borderRadius: BorderRadius.circular(5),
-                                    image: const DecorationImage(
-                                        image: AssetImage(
-                                            'assets/rechargecred.png'),
-                                        fit: BoxFit.cover)),
-                              ),
-                              Text("Recharger"),
-                              Text("du crédit")
-                            ],
-                          ),
+                        Content(
+                            imageUrl: "assets/shopping.png", title: 'Shopping'),
+                        Content(
+                          imageUrl: 'assets/gaz.png',
+                          title: 'Gaz',
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                decoration: BoxDecoration(
-                                    color: Color.fromARGB(3, 247, 245, 245),
-                                    borderRadius: BorderRadius.circular(5),
-                                    image: const DecorationImage(
-                                        image:
-                                            AssetImage('assets/coursier.png'),
-                                        fit: BoxFit.cover)),
-                              ),
-                              Text("Coursier")
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                decoration: BoxDecoration(
-                                    color: Color.fromARGB(3, 247, 245, 245),
-                                    borderRadius: BorderRadius.circular(5),
-                                    image: const DecorationImage(
-                                        image:
-                                            AssetImage('assets/billeterie.png'),
-                                        fit: BoxFit.cover)),
-                              ),
-                              Text("Billeterie")
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 70,
-                                decoration: BoxDecoration(
-                                    color: Color.fromARGB(3, 247, 245, 245),
-                                    borderRadius: BorderRadius.circular(5),
-                                    image: const DecorationImage(
-                                        image: AssetImage('assets/food.png'),
-                                        fit: BoxFit.cover)),
-                              ),
-                              Text("Food")
-                            ],
-                          ),
+                        Content(
+                          imageUrl: 'assets/aide.png',
+                          title: 'Aide',
                         ),
                       ],
                     ),
@@ -281,10 +175,48 @@ class HomeBodyScreen extends StatelessWidget {
                 ),
               ],
             ),
-            Item(imageUrl: "/assets/shopping.png", title: "Shopping"),
             const Row()
           ],
         ),
+      ),
+    );
+  }
+}
+
+class Content extends StatelessWidget {
+  final String title;
+  final String imageUrl;
+  const Content({
+    super.key,
+    required this.imageUrl,
+    required this.title,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(5.0),
+      child: Column(
+        children: [
+          Container(
+            height: 70,
+            width: 70,
+            decoration: BoxDecoration(
+                color: Color.fromARGB(3, 247, 245, 245),
+                borderRadius: BorderRadius.circular(5),
+                image: DecorationImage(
+                    image: AssetImage(imageUrl), fit: BoxFit.cover)),
+          ),
+          Text(title,
+              style: TextStyle(
+                fontSize: 15,
+                color: Colors.black,
+                overflow: TextOverflow.ellipsis,
+              ),
+              overflow: TextOverflow.ellipsis,
+              maxLines: 4,
+              textAlign: TextAlign.center),
+        ],
       ),
     );
   }
