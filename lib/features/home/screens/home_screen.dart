@@ -1,30 +1,41 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
+import 'package:gozem_clone/features/home/screens/home_body_screen.dart';
 
-class HomeScreen extends StatelessWidget{
+class HomeScreen extends StatelessWidget {
   @override
-  Widget build(BuildContext context){
-    Size size = MediaQuery.sizeOf(context);
+  Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
       appBar: AppBar(
-        actions:[Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SizedBox(width: 50,height: 50,
-            child: Stack(children: [
-              Positioned.fill(child: Icon(Icons.notifications)),
-              Positioned(child: Text("8"),right: 15,top: 5,)
-            ],),
-          ),
-        )],
         centerTitle: true,
-        title: Image.asset("assets/image/cover.png",width: size.width*0.4,),
+        actions: [Icon(Icons.notifications_outlined)],
+        //leading: Image.asset("assets/account1.jpg"),
         leading: CircleAvatar(
-          maxRadius: 5,
-          backgroundImage: AssetImage("assets/image/avatar.jpeg"),
-
+          backgroundImage: AssetImage("assets/account1.jpg"),
         ),
+        title: Image.asset(
+          'assets/logo2.png',
+          height: 75,
+          width: 175,
+        ),
+      ),
+      body: const HomeBodyScreen(),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.green,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
+        unselectedItemColor: Colors.grey,
+        iconSize: 32,
+        elevation: 10,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Acceuil'),
+          BottomNavigationBarItem(icon: Icon(Icons.help), label: 'Aide'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.location_pin), label: 'Adresses'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.access_time_filled_rounded), label: 'Activites'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.account_box), label: 'Compte')
+        ],
       ),
     );
   }
